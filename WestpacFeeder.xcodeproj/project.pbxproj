@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4AA047618A4371D00E3AC64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047518A4371D00E3AC64 /* Foundation.framework */; };
+		C4AA047818A4371D00E3AC64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047718A4371D00E3AC64 /* CoreGraphics.framework */; };
+		C4AA047A18A4371D00E3AC64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047918A4371D00E3AC64 /* UIKit.framework */; };
+		C4AA048018A4371D00E3AC64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AA047E18A4371D00E3AC64 /* InfoPlist.strings */; };
+		C4AA048218A4371D00E3AC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048118A4371D00E3AC64 /* main.m */; };
+		C4AA048618A4371D00E3AC64 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */; };
+		C4AA048918A4371D00E3AC64 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */; };
+		C4AA048C18A4371D00E3AC64 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */; };
+		C4AA048F18A4371D00E3AC64 /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048E18A4371D00E3AC64 /* DKViewController.m */; };
+		C4AA049118A4371D00E3AC64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AA049018A4371D00E3AC64 /* Images.xcassets */; };
+		C4AA049818A4371D00E3AC64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA049718A4371D00E3AC64 /* XCTest.framework */; };
+		C4AA049918A4371D00E3AC64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047518A4371D00E3AC64 /* Foundation.framework */; };
+		C4AA049A18A4371D00E3AC64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047918A4371D00E3AC64 /* UIKit.framework */; };
+		C4AA04A218A4371D00E3AC64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */; };
+		C4AA04A418A4371D00E3AC64 /* WestpacFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4AA049B18A4371D00E3AC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AA046A18A4371D00E3AC64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4AA047118A4371D00E3AC64;
+			remoteInfo = WestpacFeeder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C4AA047218A4371D00E3AC64 /* WestpacFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestpacFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AA047518A4371D00E3AC64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C4AA047718A4371D00E3AC64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C4AA047918A4371D00E3AC64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C4AA047D18A4371D00E3AC64 /* WestpacFeeder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WestpacFeeder-Info.plist"; sourceTree = "<group>"; };
+		C4AA047F18A4371D00E3AC64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4AA048118A4371D00E3AC64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4AA048318A4371D00E3AC64 /* WestpacFeeder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WestpacFeeder-Prefix.pch"; sourceTree = "<group>"; };
+		C4AA048418A4371D00E3AC64 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		C4AA048818A4371D00E3AC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C4AA048B18A4371D00E3AC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C4AA048D18A4371D00E3AC64 /* DKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewController.h; sourceTree = "<group>"; };
+		C4AA048E18A4371D00E3AC64 /* DKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
+		C4AA049018A4371D00E3AC64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C4AA049618A4371D00E3AC64 /* WestpacFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WestpacFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AA049718A4371D00E3AC64 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C4AA049F18A4371D00E3AC64 /* WestpacFeederTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WestpacFeederTests-Info.plist"; sourceTree = "<group>"; };
+		C4AA04A118A4371D00E3AC64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestpacFeederTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4AA046F18A4371D00E3AC64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA047818A4371D00E3AC64 /* CoreGraphics.framework in Frameworks */,
+				C4AA047A18A4371D00E3AC64 /* UIKit.framework in Frameworks */,
+				C4AA047618A4371D00E3AC64 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AA049318A4371D00E3AC64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA049818A4371D00E3AC64 /* XCTest.framework in Frameworks */,
+				C4AA049A18A4371D00E3AC64 /* UIKit.framework in Frameworks */,
+				C4AA049918A4371D00E3AC64 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4AA046918A4371D00E3AC64 = {
+			isa = PBXGroup;
+			children = (
+				C4AA047B18A4371D00E3AC64 /* WestpacFeeder */,
+				C4AA049D18A4371D00E3AC64 /* WestpacFeederTests */,
+				C4AA047418A4371D00E3AC64 /* Frameworks */,
+				C4AA047318A4371D00E3AC64 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4AA047318A4371D00E3AC64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA047218A4371D00E3AC64 /* WestpacFeeder.app */,
+				C4AA049618A4371D00E3AC64 /* WestpacFeederTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4AA047418A4371D00E3AC64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA047518A4371D00E3AC64 /* Foundation.framework */,
+				C4AA047718A4371D00E3AC64 /* CoreGraphics.framework */,
+				C4AA047918A4371D00E3AC64 /* UIKit.framework */,
+				C4AA049718A4371D00E3AC64 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4AA047B18A4371D00E3AC64 /* WestpacFeeder */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA048418A4371D00E3AC64 /* DKAppDelegate.h */,
+				C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */,
+				C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */,
+				C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */,
+				C4AA048D18A4371D00E3AC64 /* DKViewController.h */,
+				C4AA048E18A4371D00E3AC64 /* DKViewController.m */,
+				C4AA049018A4371D00E3AC64 /* Images.xcassets */,
+				C4AA047C18A4371D00E3AC64 /* Supporting Files */,
+			);
+			path = WestpacFeeder;
+			sourceTree = "<group>";
+		};
+		C4AA047C18A4371D00E3AC64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA047D18A4371D00E3AC64 /* WestpacFeeder-Info.plist */,
+				C4AA047E18A4371D00E3AC64 /* InfoPlist.strings */,
+				C4AA048118A4371D00E3AC64 /* main.m */,
+				C4AA048318A4371D00E3AC64 /* WestpacFeeder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4AA049D18A4371D00E3AC64 /* WestpacFeederTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */,
+				C4AA049E18A4371D00E3AC64 /* Supporting Files */,
+			);
+			path = WestpacFeederTests;
+			sourceTree = "<group>";
+		};
+		C4AA049E18A4371D00E3AC64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA049F18A4371D00E3AC64 /* WestpacFeederTests-Info.plist */,
+				C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4AA047118A4371D00E3AC64 /* WestpacFeeder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AA04A718A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeeder" */;
+			buildPhases = (
+				C4AA046E18A4371D00E3AC64 /* Sources */,
+				C4AA046F18A4371D00E3AC64 /* Frameworks */,
+				C4AA047018A4371D00E3AC64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WestpacFeeder;
+			productName = WestpacFeeder;
+			productReference = C4AA047218A4371D00E3AC64 /* WestpacFeeder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4AA049518A4371D00E3AC64 /* WestpacFeederTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AA04AA18A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeederTests" */;
+			buildPhases = (
+				C4AA049218A4371D00E3AC64 /* Sources */,
+				C4AA049318A4371D00E3AC64 /* Frameworks */,
+				C4AA049418A4371D00E3AC64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4AA049C18A4371D00E3AC64 /* PBXTargetDependency */,
+			);
+			name = WestpacFeederTests;
+			productName = WestpacFeederTests;
+			productReference = C4AA049618A4371D00E3AC64 /* WestpacFeederTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4AA046A18A4371D00E3AC64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Doron Katz";
+				TargetAttributes = {
+					C4AA049518A4371D00E3AC64 = {
+						TestTargetID = C4AA047118A4371D00E3AC64;
+					};
+				};
+			};
+			buildConfigurationList = C4AA046D18A4371D00E3AC64 /* Build configuration list for PBXProject "WestpacFeeder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4AA046918A4371D00E3AC64;
+			productRefGroup = C4AA047318A4371D00E3AC64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4AA047118A4371D00E3AC64 /* WestpacFeeder */,
+				C4AA049518A4371D00E3AC64 /* WestpacFeederTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4AA047018A4371D00E3AC64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA048C18A4371D00E3AC64 /* Main_iPad.storyboard in Resources */,
+				C4AA049118A4371D00E3AC64 /* Images.xcassets in Resources */,
+				C4AA048918A4371D00E3AC64 /* Main_iPhone.storyboard in Resources */,
+				C4AA048018A4371D00E3AC64 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AA049418A4371D00E3AC64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA04A218A4371D00E3AC64 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4AA046E18A4371D00E3AC64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA048218A4371D00E3AC64 /* main.m in Sources */,
+				C4AA048F18A4371D00E3AC64 /* DKViewController.m in Sources */,
+				C4AA048618A4371D00E3AC64 /* DKAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AA049218A4371D00E3AC64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AA04A418A4371D00E3AC64 /* WestpacFeederTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4AA049C18A4371D00E3AC64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4AA047118A4371D00E3AC64 /* WestpacFeeder */;
+			targetProxy = C4AA049B18A4371D00E3AC64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4AA047E18A4371D00E3AC64 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4AA047F18A4371D00E3AC64 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4AA048818A4371D00E3AC64 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4AA048B18A4371D00E3AC64 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4AA04A118A4371D00E3AC64 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4AA04A518A4371D00E3AC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4AA04A618A4371D00E3AC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4AA04A818A4371D00E3AC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
+				INFOPLIST_FILE = "WestpacFeeder/WestpacFeeder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C4AA04A918A4371D00E3AC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
+				INFOPLIST_FILE = "WestpacFeeder/WestpacFeeder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C4AA04AB18A4371D00E3AC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WestpacFeeder.app/WestpacFeeder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WestpacFeederTests/WestpacFeederTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C4AA04AC18A4371D00E3AC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WestpacFeeder.app/WestpacFeeder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
+				INFOPLIST_FILE = "WestpacFeederTests/WestpacFeederTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4AA046D18A4371D00E3AC64 /* Build configuration list for PBXProject "WestpacFeeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AA04A518A4371D00E3AC64 /* Debug */,
+				C4AA04A618A4371D00E3AC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AA04A718A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AA04A818A4371D00E3AC64 /* Debug */,
+				C4AA04A918A4371D00E3AC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C4AA04AA18A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeederTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AA04AB18A4371D00E3AC64 /* Debug */,
+				C4AA04AC18A4371D00E3AC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4AA046A18A4371D00E3AC64 /* Project object */;
+}
