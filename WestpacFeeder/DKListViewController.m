@@ -27,7 +27,8 @@ static NSString * const ImageStateSelected = @"_selected";
 //- (void)deselectCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic, assign) AFHTTPRequestOperation *operation;
-
+@property (nonatomic, strong) UIWebView* webView;
+@property (nonatomic, strong) UIActivityIndicatorView* activityIndicator;
 
 
 - (void)startIconDownload:(News *)news forIndexPath:(NSIndexPath *)indexPath;
@@ -41,6 +42,8 @@ static NSString * const ImageStateSelected = @"_selected";
 @synthesize internetReach;
 @synthesize wifiReach;
 @synthesize networkStatus;
+@synthesize webView;
+@synthesize activityIndicator;
 @synthesize hostReach;
 @synthesize operation;
 @synthesize _data;
@@ -72,6 +75,16 @@ static NSString * const ImageStateSelected = @"_selected";
     self.appDelegate = (DKAppDelegate*) [[UIApplication sharedApplication] delegate];
 	[self getNews:nil];
     
+    
+    activityIndicator = [[UIActivityIndicatorView alloc]
+                         initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityIndicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+    
+    activityIndicator.center = self.tableView.center;
+    
+    [self.tableView insertSubview:activityIndicator aboveSubview:self.tableView];
+    
+    
     [self monitorReachability];
     self.iconImageDownloadsInProgress = [NSMutableDictionary dictionary];
     
@@ -80,6 +93,8 @@ static NSString * const ImageStateSelected = @"_selected";
     [[self navigationItem] setLeftBarButtonItem:refreshButton];
     [refreshButton release];
     
+    webView = [[UIWebView alloc] initWithFrame: self.view.frame];
+    webView.delegate = self;
     
     
 }
@@ -111,7 +126,7 @@ static NSString * const ImageStateSelected = @"_selected";
 }
 
 
-- (BOOL)isParseReachable {
+- (BOOL)isJSONReachable {
     return self.networkStatus != NotReachable;
 }
 
@@ -119,7 +134,7 @@ static NSString * const ImageStateSelected = @"_selected";
 - (void)monitorReachability {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:ReachabilityChangedNotification object:nil];
     
-    self.hostReach = [Reachability reachabilityWithHostName:@"api.parse.com"];
+    self.hostReach = [Reachability reachabilityWithHostName:NEWS_FEED_URL];
     [self.hostReach startNotifier];
     
     self.internetReach = [Reachability reachabilityForInternetConnection];
@@ -137,9 +152,10 @@ static NSString * const ImageStateSelected = @"_selected";
     
     networkStatus = [curReach currentReachabilityStatus];
     
-    if (networkStatus == NotReachable) {
-        NSLog(@"Network not reachable.");
-    }
+//    if (networkStatus == NotReachable) {
+//        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There's an issue iwth our server. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+//        [alert show];
+//    }
     
 }
 
@@ -152,11 +168,31 @@ static NSString * const ImageStateSelected = @"_selected";
   
     NSURLRequest* jRequest  = [client requestWithMethod:@"GET" path:nil parameters:nil];
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [activityIndicator startAnimating];
+    
+    
+    
+    [UIView beginAnimations:@"fade in" context:nil];
+    [UIView setAnimationDuration:3.0];
+    self.tableView.alpha = 0.4;
+    [UIView commitAnimations];
+    
+    
     operation = [[AFHTTPRequestOperation alloc]initWithRequest:jRequest];
     
     [operation  setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         DKDebug(@"IP Address: %@", [self.operation responseString]);
+        
+        [UIView beginAnimations:@"fade out" context:nil];
+        [UIView setAnimationDuration:2.0];
+        self.tableView.alpha = 1.0;
+        [UIView commitAnimations];
+        
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [activityIndicator stopAnimating];
         
         //[self.refreshControl endRefreshing];
         NSData* data = [[DKAPIManager cleanJSONWithString:self.operation.responseString] dataUsingEncoding:NSUTF8StringEncoding];
@@ -166,10 +202,15 @@ static NSString * const ImageStateSelected = @"_selected";
         self.title=[dataList objectForKey:@"name"];
         [self.tableView reloadData];
         // End Refreshing
-        [self.operation release];
+        //[self.operation release];
     }  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         DKDebug(@"error %@", error);
         // End Refreshing
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [activityIndicator stopAnimating];
+        
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There's an issue iwth our server. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+        [alert show];
         
     }];
     // 8 - Start request
@@ -211,7 +252,6 @@ static NSString * const ImageStateSelected = @"_selected";
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
     }
     
     News *object = _newsArray[indexPath.row];
@@ -367,16 +407,62 @@ static NSString * const ImageStateSelected = @"_selected";
     
     News *object = _newsArray[indexPath.row];
     
+    webView.delegate  = self;
+    webView.scalesPageToFit = YES;
     
-    UIWebView *uiWebView = [[UIWebView alloc] initWithFrame: self.view.frame];
-    [uiWebView loadRequest:[NSURLRequest requestWithURL:
+    [webView loadRequest:[NSURLRequest requestWithURL:
                             [NSURL URLWithString: object.webHref]]];
     
-    [webViewController.view addSubview: uiWebView];
-    [uiWebView release];
+    UIBarButtonItem* performReloadBtn = [[UIBarButtonItem alloc]
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                         target:self action:@selector(performReload:)];
+    
+    webViewController.navigationItem.rightBarButtonItem = performReloadBtn;
+    
+    [webViewController.view addSubview: webView];
+    
+    
+    
+    
+    [webView addSubview: activityIndicator];
+    
+    
+    
+    //[webView release];
     
     [self.navigationController pushViewController: webViewController animated:YES];
 }
+
+#pragma mark WEBVIEW Methods   
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [activityIndicator startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [activityIndicator stopAnimating];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There's an issue iwth our server. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+
+- (IBAction) performReload:(id) sender {
+    [self.webView reload];
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ReachabilityChangedNotification object:nil];
+}
+
+
 
 
 - (void)dealloc {
@@ -388,6 +474,9 @@ static NSString * const ImageStateSelected = @"_selected";
     [hostReach release];
     [internetReach release];
     [wifiReach release];
+    webView.delegate = nil;
+    [webView release];
+    [activityIndicator release];
     [operation release];
     [_data release];
     [_iconImageDownloadsInProgress release];

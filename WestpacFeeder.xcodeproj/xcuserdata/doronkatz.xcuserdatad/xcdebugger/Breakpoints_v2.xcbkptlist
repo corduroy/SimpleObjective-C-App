@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "263"
             endingLineNumber = "263"
-            landmarkName = "-startIconDownload:forIndexPath:"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,7 +30,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "456"
-            endingLineNumber = "456">
+            endingLineNumber = "456"
+            landmarkName = "-performReload:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -45,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
             endingLineNumber = "140"
-            landmarkName = "-reachabilityChanged:"
+            landmarkName = "-monitorReachability"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -60,7 +62,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "451"
-            endingLineNumber = "451">
+            endingLineNumber = "451"
+            landmarkName = "-webView:didFailLoadWithError:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -75,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
             endingLineNumber = "212"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkName = "-getNews:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
