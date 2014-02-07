@@ -264,7 +264,7 @@ static NSString * const ImageStateSelected = @"_selected";
     // Only load cached images; defer new downloads until scrolling ends
     if (!object.imageSmall)
     {
-        DKDebug(@"object thumbnail %@", object.thumbnailImageHref);
+        //DKDebug(@"object thumbnail %@", object.thumbnailImageHref);
         if (object.thumbnailImageHref != (id)[NSNull null])
             [self startIconDownload:object forIndexPath:indexPath];
         // if a download is deferred or in progress, return a placeholder image
@@ -334,7 +334,7 @@ static NSString * const ImageStateSelected = @"_selected";
 // called by our ImageDownloader when an icon is ready to be displayed
 - (void)appImageDidLoad:(NSIndexPath *)indexPath
 {
-    DKDebug(@"index path is %ld", (long)indexPath.row);
+    //DKDebug(@"index path is %ld", (long)indexPath.row);
     DKThumbnailDownloader *iconDownloader = [_iconImageDownloadsInProgress objectForKey:indexPath];
     if (iconDownloader != nil)
     {
@@ -350,7 +350,7 @@ static NSString * const ImageStateSelected = @"_selected";
         
         
         // Display the newly loaded image
-        DKDebug(@"cell %ld", (long)iconDownloader.indexPathInTableView.row);
+        //DKDebug(@"cell %ld", (long)iconDownloader.indexPathInTableView.row);
         cellImg.image = iconDownloader.news.imageSmall;
         
     }

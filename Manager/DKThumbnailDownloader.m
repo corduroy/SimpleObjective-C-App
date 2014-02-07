@@ -42,7 +42,7 @@
     
     if (news.thumbnailImageHref == (id)[NSNull null]) return;
     self.activeDownload = [NSMutableData data];
-    DKDebug(@"url for image %@", news.thumbnailImageHref);
+    //DKDebug(@"url for image %@", news.thumbnailImageHref);
     // alloc+init and start an NSURLConnection; release on completion/failure
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:
                              [NSURLRequest requestWithURL:
