@@ -126,7 +126,7 @@ static NSString * const ImageStateSelected = @"_selected";
 }
 
 
-- (BOOL)isParseReachable {
+- (BOOL)isJSONReachable {
     return self.networkStatus != NotReachable;
 }
 
@@ -152,10 +152,10 @@ static NSString * const ImageStateSelected = @"_selected";
     
     networkStatus = [curReach currentReachabilityStatus];
     
-    if (networkStatus == NotReachable) {
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There's an issue iwth our server. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-        [alert show];
-    }
+//    if (networkStatus == NotReachable) {
+//        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There's an issue iwth our server. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+//        [alert show];
+//    }
     
 }
 

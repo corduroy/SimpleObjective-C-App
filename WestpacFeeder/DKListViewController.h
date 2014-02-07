@@ -32,7 +32,7 @@
 
 - (void)appImageDidLoad:(NSIndexPath *)indexPath;
 
-- (BOOL)isParseReachable;
+- (BOOL)isJSONReachable;
 
 
 
