@@ -7,7 +7,6 @@
 //
 
 #import "DKListViewController.h"
-#import "DKDetailWebViewController.h"
 #import "DKAppDelegate.h"
 #import "AFNetworking.h"
 #import "News.h"
@@ -26,6 +25,11 @@ static NSString * const ImageStateSelected = @"_selected";
 
 //- (void)selectCellAtIndexPath:(NSIndexPath *)indexPath;
 //- (void)deselectCellAtIndexPath:(NSIndexPath *)indexPath;
+
+@property (nonatomic, assign) AFHTTPRequestOperation *operation;
+
+
+
 - (void)startIconDownload:(News *)news forIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -39,6 +43,7 @@ static NSString * const ImageStateSelected = @"_selected";
 @synthesize wifiReach;
 @synthesize networkStatus;
 @synthesize hostReach;
+@synthesize operation;
 @synthesize _data;
 
 
@@ -92,7 +97,7 @@ static NSString * const ImageStateSelected = @"_selected";
 
 
 - (IBAction)refreshAction:(id)sender{
-    
+    [self getNews:nil];
 }
 
 
@@ -148,21 +153,21 @@ static NSString * const ImageStateSelected = @"_selected";
   
     NSURLRequest* jRequest  = [client requestWithMethod:@"GET" path:nil parameters:nil];
     
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:jRequest];
+    operation = [[AFHTTPRequestOperation alloc]initWithRequest:jRequest];
     
     [operation  setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        DKDebug(@"IP Address: %@", [operation responseString]);
+        DKDebug(@"IP Address: %@", [self.operation responseString]);
         
         //[self.refreshControl endRefreshing];
-        NSData* data = [[DKAPIManager cleanJSONWithString:operation.responseString] dataUsingEncoding:NSUTF8StringEncoding];
+        NSData* data = [[DKAPIManager cleanJSONWithString:self.operation.responseString] dataUsingEncoding:NSUTF8StringEncoding];
         
         NSDictionary* dataList = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         _newsArray = [DKAPIManager createListOfNews:[dataList objectForKey:@"items"]];
         self.title=[dataList objectForKey:@"name"];
         [self.tableView reloadData];
         // End Refreshing
-
+        [self.operation release];
     }  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         DKDebug(@"error %@", error);
         // End Refreshing
@@ -216,7 +221,6 @@ static NSString * const ImageStateSelected = @"_selected";
     cell.detailTextLabel.text = object.slugLine;
     cell.detailTextLabel.numberOfLines = 3 ;
     
-    UIImageView *imgNews = [[UIImageView alloc] init];
     
     // Only load cached images; defer new downloads until scrolling ends
     if (!object.imageSmall)
@@ -229,10 +233,9 @@ static NSString * const ImageStateSelected = @"_selected";
     }
     else
     {
-        imgNews.image = object.imageSmall;
+        [cell.imageView setImage:object.imageSmall];
     }
     
-    [cell.imageView setImage:imgNews.image];
    
     return cell;
 }
@@ -258,7 +261,7 @@ static NSString * const ImageStateSelected = @"_selected";
 
 - (void)startIconDownload:(News *)news forIndexPath:(NSIndexPath *)indexPath
 {
-    DKThumbnailDownloader *iconDownloader = [_iconImageDownloadsInProgress objectForKey:indexPath];
+    iconDownloader = [_iconImageDownloadsInProgress objectForKey:indexPath];
     if (iconDownloader == nil)
     {
         iconDownloader = [[DKThumbnailDownloader alloc] init];
@@ -316,6 +319,10 @@ static NSString * const ImageStateSelected = @"_selected";
     // Remove the IconDownloader from the in progress list.
     // This will result in it being deallocated.
     [_iconImageDownloadsInProgress removeObjectForKey:indexPath];
+    iconDownloader.delegate = nil;
+    [iconDownloader release];
+    
+    
     [self.tableView reloadData];
     
 }
@@ -376,12 +383,14 @@ static NSString * const ImageStateSelected = @"_selected";
 - (void)dealloc {
     
 	[super dealloc];
+    appDelegate = nil;
     [appDelegate release];
     [firstDetailViewController release];
     [hostReach release];
     [internetReach release];
     [wifiReach release];
     [hud release];
+    [operation release];
     [_data release];
     [_iconImageDownloadsInProgress release];
     [_newsArray release];

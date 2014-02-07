@@ -25,6 +25,8 @@
 - (void)dealloc
 {
     [news release];
+    delegate = nil;
+    
     [indexPathInTableView release];
     
     [activeDownload release];
@@ -102,5 +104,8 @@
     // call our delegate and tell it that our icon is ready for display
     [delegate appImageDidLoad:self.indexPathInTableView];
 }
+
+
+
 
 @end

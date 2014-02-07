@@ -19,7 +19,6 @@
 		C4AA04A218A4371D00E3AC64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */; };
 		C4AA04A418A4371D00E3AC64 /* WestpacFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */; };
 		C4AA050218A4814200E3AC64 /* DKListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA050118A4814200E3AC64 /* DKListViewController.m */; };
-		C4B93D8818A486B4001288C0 /* DKDetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B93D8718A486B4001288C0 /* DKDetailWebViewController.m */; };
 		C4B93D8A18A48A8C001288C0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B93D8918A48A8C001288C0 /* MainWindow.xib */; };
 		C4B93D8B18A48A8C001288C0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B93D8918A48A8C001288C0 /* MainWindow.xib */; };
 		C4CA569D18A48CBC001B9B5B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA569C18A48CBC001B9B5B /* CFNetwork.framework */; };
@@ -87,8 +86,6 @@
 		C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestpacFeederTests.m; sourceTree = "<group>"; };
 		C4AA050018A4814200E3AC64 /* DKListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKListViewController.h; sourceTree = "<group>"; };
 		C4AA050118A4814200E3AC64 /* DKListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKListViewController.m; sourceTree = "<group>"; };
-		C4B93D8618A486B4001288C0 /* DKDetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDetailWebViewController.h; sourceTree = "<group>"; };
-		C4B93D8718A486B4001288C0 /* DKDetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDetailWebViewController.m; sourceTree = "<group>"; };
 		C4B93D8918A48A8C001288C0 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = SOURCE_ROOT; };
 		C4CA569B18A48BCF001B9B5B /* DKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKConstants.h; sourceTree = SOURCE_ROOT; };
 		C4CA569C18A48CBC001B9B5B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -206,8 +203,6 @@
 				C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */,
 				C4AA050018A4814200E3AC64 /* DKListViewController.h */,
 				C4AA050118A4814200E3AC64 /* DKListViewController.m */,
-				C4B93D8618A486B4001288C0 /* DKDetailWebViewController.h */,
-				C4B93D8718A486B4001288C0 /* DKDetailWebViewController.m */,
 				C4AA047C18A4371D00E3AC64 /* Supporting Files */,
 			);
 			path = WestpacFeeder;
@@ -440,7 +435,6 @@
 				C4CA56A618A48E94001B9B5B /* DKAPIManager.m in Sources */,
 				C4CA56D018A490EE001B9B5B /* DKThumbnailDownloader.m in Sources */,
 				C4CA56C618A48F44001B9B5B /* AFPropertyListRequestOperation.m in Sources */,
-				C4B93D8818A486B4001288C0 /* DKDetailWebViewController.m in Sources */,
 				C4AA048218A4371D00E3AC64 /* main.m in Sources */,
 				C4CA56CA18A48F44001B9B5B /* AFXMLRequestOperation.m in Sources */,
 				C4CA56C418A48F44001B9B5B /* AFNetworkActivityIndicatorManager.m in Sources */,
