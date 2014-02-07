@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
 #import "UIImageView+AFNetworking.h"
 #import "Reachability.h"
 #import "DKThumbnailDownloader.h"
@@ -25,7 +24,6 @@
 @property (nonatomic, strong) Reachability *hostReach;
 @property (nonatomic, strong) Reachability *internetReach;
 @property (nonatomic, strong) Reachability *wifiReach;
-@property (nonatomic, strong) MBProgressHUD *hud;
 @property (nonatomic, strong) NSMutableData *_data;
 @property (nonatomic, strong) NSMutableDictionary   *iconImageDownloadsInProgress;
 @property (nonatomic, readonly) int networkStatus;

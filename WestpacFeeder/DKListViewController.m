@@ -38,7 +38,6 @@ static NSString * const ImageStateSelected = @"_selected";
 @synthesize firstDetailViewController;
 @synthesize appDelegate;
 @synthesize iconImageDownloadsInProgress = _iconImageDownloadsInProgress;
-@synthesize hud;
 @synthesize internetReach;
 @synthesize wifiReach;
 @synthesize networkStatus;
@@ -261,7 +260,7 @@ static NSString * const ImageStateSelected = @"_selected";
 
 - (void)startIconDownload:(News *)news forIndexPath:(NSIndexPath *)indexPath
 {
-    iconDownloader = [_iconImageDownloadsInProgress objectForKey:indexPath];
+    DKThumbnailDownloader* iconDownloader = [_iconImageDownloadsInProgress objectForKey:indexPath];
     if (iconDownloader == nil)
     {
         iconDownloader = [[DKThumbnailDownloader alloc] init];
@@ -389,7 +388,6 @@ static NSString * const ImageStateSelected = @"_selected";
     [hostReach release];
     [internetReach release];
     [wifiReach release];
-    [hud release];
     [operation release];
     [_data release];
     [_iconImageDownloadsInProgress release];
