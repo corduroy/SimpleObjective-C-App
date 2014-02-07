@@ -8,13 +8,36 @@
 
 #import "DKAppDelegate.h"
 
+#import "DKListViewController.h"
+#import "DKFirstViewController.h"
+
+
+
 @implementation DKAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+@synthesize window, splitViewController, rootViewController, detailViewController;
+@synthesize refreshButton, rootPopoverButtonItem;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after app launch.
+    self.splitViewController =[[UISplitViewController alloc]init];
+	self.rootViewController=[[DKListViewController alloc]init];
+	self.detailViewController=[[[DKFirstViewController alloc]init] autorelease];
+	
+	UINavigationController *rootNav=[[UINavigationController alloc]initWithRootViewController:rootViewController];
+    UINavigationController *detailNav=[[UINavigationController alloc]initWithRootViewController:detailViewController];
+	
+	
+	self.splitViewController.viewControllers=[NSArray arrayWithObjects:rootNav,detailNav,nil];
+	self.splitViewController.delegate=self.detailViewController;
+	
+    // Add the split view controller's view to the window and display.
+    [window addSubview:self.splitViewController.view];
+    [window makeKeyAndVisible];
+ 
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -42,5 +65,15 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)dealloc {
+	[rootViewController release];
+    [splitViewController release];
+    [window release];
+    [rootPopoverButtonItem release];
+	[refreshButton release];
+    [super dealloc];
+}
+
 
 @end

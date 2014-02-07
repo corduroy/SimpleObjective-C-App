@@ -8,8 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DKAppDelegate : UIResponder <UIApplicationDelegate>
+@class DKListViewController;
+@class DKFirstViewController;
 
-@property (strong, nonatomic) UIWindow *window;
+
+@interface DKAppDelegate : UIResponder <UIApplicationDelegate>{
+    UIWindow *window;
+    
+    UISplitViewController *splitViewController;
+    
+    DKListViewController *rootViewController;
+    DKFirstViewController   *detailViewController;
+    UIBarButtonItem *refreshButton;
+    UIBarButtonItem *rootPopoverButtonItem;
+
+}
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic, retain)  UISplitViewController *splitViewController;
+@property (nonatomic, retain)  DKListViewController *rootViewController;
+@property (nonatomic, retain)  DKFirstViewController *detailViewController;
+@property (nonatomic, assign) UIBarButtonItem *refreshButton;
+@property (nonatomic, assign) UIBarButtonItem *rootPopoverButtonItem;
+
 
 @end

@@ -13,15 +13,16 @@
 		C4AA048018A4371D00E3AC64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AA047E18A4371D00E3AC64 /* InfoPlist.strings */; };
 		C4AA048218A4371D00E3AC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048118A4371D00E3AC64 /* main.m */; };
 		C4AA048618A4371D00E3AC64 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */; };
-		C4AA048918A4371D00E3AC64 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */; };
-		C4AA048C18A4371D00E3AC64 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */; };
-		C4AA048F18A4371D00E3AC64 /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA048E18A4371D00E3AC64 /* DKViewController.m */; };
-		C4AA049118A4371D00E3AC64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AA049018A4371D00E3AC64 /* Images.xcassets */; };
 		C4AA049818A4371D00E3AC64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA049718A4371D00E3AC64 /* XCTest.framework */; };
 		C4AA049918A4371D00E3AC64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047518A4371D00E3AC64 /* Foundation.framework */; };
 		C4AA049A18A4371D00E3AC64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AA047918A4371D00E3AC64 /* UIKit.framework */; };
 		C4AA04A218A4371D00E3AC64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */; };
 		C4AA04A418A4371D00E3AC64 /* WestpacFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */; };
+		C4AA050218A4814200E3AC64 /* DKListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AA050118A4814200E3AC64 /* DKListViewController.m */; };
+		C4B93D8818A486B4001288C0 /* DKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B93D8718A486B4001288C0 /* DKFirstViewController.m */; };
+		C4B93D8A18A48A8C001288C0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B93D8918A48A8C001288C0 /* MainWindow.xib */; };
+		C4B93D8B18A48A8C001288C0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B93D8918A48A8C001288C0 /* MainWindow.xib */; };
+		D04CB71581B945E494DF4D9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA36CA6A8974AC1939E2044 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0166F313EECC43BC86DE51CF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		0AA36CA6A8974AC1939E2044 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AA047218A4371D00E3AC64 /* WestpacFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestpacFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AA047518A4371D00E3AC64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4AA047718A4371D00E3AC64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,16 +48,16 @@
 		C4AA048318A4371D00E3AC64 /* WestpacFeeder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WestpacFeeder-Prefix.pch"; sourceTree = "<group>"; };
 		C4AA048418A4371D00E3AC64 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
 		C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
-		C4AA048818A4371D00E3AC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		C4AA048B18A4371D00E3AC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		C4AA048D18A4371D00E3AC64 /* DKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewController.h; sourceTree = "<group>"; };
-		C4AA048E18A4371D00E3AC64 /* DKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
-		C4AA049018A4371D00E3AC64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4AA049618A4371D00E3AC64 /* WestpacFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WestpacFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AA049718A4371D00E3AC64 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C4AA049F18A4371D00E3AC64 /* WestpacFeederTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WestpacFeederTests-Info.plist"; sourceTree = "<group>"; };
 		C4AA04A118A4371D00E3AC64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4AA04A318A4371D00E3AC64 /* WestpacFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WestpacFeederTests.m; sourceTree = "<group>"; };
+		C4AA050018A4814200E3AC64 /* DKListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKListViewController.h; sourceTree = "<group>"; };
+		C4AA050118A4814200E3AC64 /* DKListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKListViewController.m; sourceTree = "<group>"; };
+		C4B93D8618A486B4001288C0 /* DKFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKFirstViewController.h; sourceTree = "<group>"; };
+		C4B93D8718A486B4001288C0 /* DKFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKFirstViewController.m; sourceTree = "<group>"; };
+		C4B93D8918A48A8C001288C0 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 				C4AA047818A4371D00E3AC64 /* CoreGraphics.framework in Frameworks */,
 				C4AA047A18A4371D00E3AC64 /* UIKit.framework in Frameworks */,
 				C4AA047618A4371D00E3AC64 /* Foundation.framework in Frameworks */,
+				D04CB71581B945E494DF4D9C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				C4AA049D18A4371D00E3AC64 /* WestpacFeederTests */,
 				C4AA047418A4371D00E3AC64 /* Frameworks */,
 				C4AA047318A4371D00E3AC64 /* Products */,
+				0166F313EECC43BC86DE51CF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +112,7 @@
 				C4AA047718A4371D00E3AC64 /* CoreGraphics.framework */,
 				C4AA047918A4371D00E3AC64 /* UIKit.framework */,
 				C4AA049718A4371D00E3AC64 /* XCTest.framework */,
+				0AA36CA6A8974AC1939E2044 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,11 +122,10 @@
 			children = (
 				C4AA048418A4371D00E3AC64 /* DKAppDelegate.h */,
 				C4AA048518A4371D00E3AC64 /* DKAppDelegate.m */,
-				C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */,
-				C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */,
-				C4AA048D18A4371D00E3AC64 /* DKViewController.h */,
-				C4AA048E18A4371D00E3AC64 /* DKViewController.m */,
-				C4AA049018A4371D00E3AC64 /* Images.xcassets */,
+				C4AA050018A4814200E3AC64 /* DKListViewController.h */,
+				C4AA050118A4814200E3AC64 /* DKListViewController.m */,
+				C4B93D8618A486B4001288C0 /* DKFirstViewController.h */,
+				C4B93D8718A486B4001288C0 /* DKFirstViewController.m */,
 				C4AA047C18A4371D00E3AC64 /* Supporting Files */,
 			);
 			path = WestpacFeeder;
@@ -129,6 +134,7 @@
 		C4AA047C18A4371D00E3AC64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4B93D8918A48A8C001288C0 /* MainWindow.xib */,
 				C4AA047D18A4371D00E3AC64 /* WestpacFeeder-Info.plist */,
 				C4AA047E18A4371D00E3AC64 /* InfoPlist.strings */,
 				C4AA048118A4371D00E3AC64 /* main.m */,
@@ -162,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4AA04A718A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeeder" */;
 			buildPhases = (
+				F3BBCBBE7AF64F16BCEDEBE9 /* Check Pods Manifest.lock */,
 				C4AA046E18A4371D00E3AC64 /* Sources */,
 				C4AA046F18A4371D00E3AC64 /* Frameworks */,
 				C4AA047018A4371D00E3AC64 /* Resources */,
+				420EE6CF6A1D4EBF8C60B9B4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4AA048C18A4371D00E3AC64 /* Main_iPad.storyboard in Resources */,
-				C4AA049118A4371D00E3AC64 /* Images.xcassets in Resources */,
-				C4AA048918A4371D00E3AC64 /* Main_iPhone.storyboard in Resources */,
+				C4B93D8A18A48A8C001288C0 /* MainWindow.xib in Resources */,
 				C4AA048018A4371D00E3AC64 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,20 +249,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B93D8B18A48A8C001288C0 /* MainWindow.xib in Resources */,
 				C4AA04A218A4371D00E3AC64 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		420EE6CF6A1D4EBF8C60B9B4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BBCBBE7AF64F16BCEDEBE9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4AA046E18A4371D00E3AC64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B93D8818A486B4001288C0 /* DKFirstViewController.m in Sources */,
 				C4AA048218A4371D00E3AC64 /* main.m in Sources */,
-				C4AA048F18A4371D00E3AC64 /* DKViewController.m in Sources */,
 				C4AA048618A4371D00E3AC64 /* DKAppDelegate.m in Sources */,
+				C4AA050218A4814200E3AC64 /* DKListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,22 +326,6 @@
 				C4AA047F18A4371D00E3AC64 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C4AA048718A4371D00E3AC64 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4AA048818A4371D00E3AC64 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C4AA048A18A4371D00E3AC64 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4AA048B18A4371D00E3AC64 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C4AA04A018A4371D00E3AC64 /* InfoPlist.strings */ = {
@@ -390,12 +415,15 @@
 		};
 		C4AA04A818A4371D00E3AC64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0166F313EECC43BC86DE51CF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
 				INFOPLIST_FILE = "WestpacFeeder/WestpacFeeder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,12 +431,15 @@
 		};
 		C4AA04A918A4371D00E3AC64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0166F313EECC43BC86DE51CF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WestpacFeeder/WestpacFeeder-Prefix.pch";
 				INFOPLIST_FILE = "WestpacFeeder/WestpacFeeder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -475,6 +506,7 @@
 				C4AA04A918A4371D00E3AC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4AA04AA18A4371D00E3AC64 /* Build configuration list for PBXNativeTarget "WestpacFeederTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +515,7 @@
 				C4AA04AC18A4371D00E3AC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
