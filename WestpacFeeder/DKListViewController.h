@@ -15,7 +15,7 @@
 @class DKAppDelegate;   //Note normally i would use a singleton rather than link back to DKAppDelegate
 
 
-@interface DKListViewController : UITableViewController<IconDownloaderDelegate,NSURLConnectionDataDelegate>{
+@interface DKListViewController : UITableViewController<IconDownloaderDelegate,NSURLConnectionDataDelegate, UIWebViewDelegate>{
     DKDetailWebViewController *firstDetailViewController;
     DKAppDelegate *appDelegate;
 }
