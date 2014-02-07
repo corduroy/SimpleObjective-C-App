@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/KSCrash" "${PODS_ROOT}/Headers/NSDate-TimeDifference" "${PODS_ROOT}/Headers/ObjectiveSugar"
-OTHER_CFLAGS = $(inherited) "-isystem${PODS_ROOT}/Headers" "-isystem${PODS_ROOT}/Headers/AFNetworking" "-isystem${PODS_ROOT}/Headers/KSCrash" "-isystem${PODS_ROOT}/Headers/NSDate-TimeDifference" "-isystem${PODS_ROOT}/Headers/ObjectiveSugar"
-OTHER_LDFLAGS = -ObjC -lc++ -lz -framework CoreGraphics -framework Foundation -framework MessageUI -framework MobileCoreServices -framework Security -framework SystemConfiguration
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/KSCrash" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/NSDate-TimeDifference" "${PODS_ROOT}/Headers/ObjectiveSugar"
+OTHER_CFLAGS = $(inherited) "-isystem${PODS_ROOT}/Headers" "-isystem${PODS_ROOT}/Headers/KSCrash" "-isystem${PODS_ROOT}/Headers/MBProgressHUD" "-isystem${PODS_ROOT}/Headers/NSDate-TimeDifference" "-isystem${PODS_ROOT}/Headers/ObjectiveSugar"
+OTHER_LDFLAGS = -ObjC -lc++ -lz -framework CoreGraphics -framework Foundation -framework MessageUI -framework SystemConfiguration
 PODS_ROOT = ${SRCROOT}/Pods

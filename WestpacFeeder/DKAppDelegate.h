@@ -9,16 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class DKListViewController;
-@class DKFirstViewController;
+@class DKDetailWebViewController;
 
 
 @interface DKAppDelegate : UIResponder <UIApplicationDelegate>{
     UIWindow *window;
     
-    UISplitViewController *splitViewController;
     
     DKListViewController *rootViewController;
-    DKFirstViewController   *detailViewController;
+    DKDetailWebViewController   *detailViewController;
     UIBarButtonItem *refreshButton;
     UIBarButtonItem *rootPopoverButtonItem;
 
@@ -26,9 +25,8 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain)  UISplitViewController *splitViewController;
 @property (nonatomic, retain)  DKListViewController *rootViewController;
-@property (nonatomic, retain)  DKFirstViewController *detailViewController;
+@property (nonatomic, retain)  DKDetailWebViewController *detailViewController;
 @property (nonatomic, assign) UIBarButtonItem *refreshButton;
 @property (nonatomic, assign) UIBarButtonItem *rootPopoverButtonItem;
 

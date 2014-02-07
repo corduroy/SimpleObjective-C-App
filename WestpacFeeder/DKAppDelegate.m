@@ -9,30 +9,23 @@
 #import "DKAppDelegate.h"
 
 #import "DKListViewController.h"
-#import "DKFirstViewController.h"
+#import "DKDetailWebViewController.h"
 
 
 
 @implementation DKAppDelegate
 
-@synthesize window, splitViewController, rootViewController, detailViewController;
+@synthesize window, rootViewController, detailViewController;
 @synthesize refreshButton, rootPopoverButtonItem;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after app launch.
-    self.splitViewController =[[UISplitViewController alloc]init];
 	self.rootViewController=[[DKListViewController alloc]init];
-	self.detailViewController=[[[DKFirstViewController alloc]init] autorelease];
 	
 	UINavigationController *rootNav=[[UINavigationController alloc]initWithRootViewController:rootViewController];
-    UINavigationController *detailNav=[[UINavigationController alloc]initWithRootViewController:detailViewController];
-	
-	
-	self.splitViewController.viewControllers=[NSArray arrayWithObjects:rootNav,detailNav,nil];
-	self.splitViewController.delegate=self.detailViewController;
-	
+    
     // Add the split view controller's view to the window and display.
-    [window addSubview:self.splitViewController.view];
+    self.window.rootViewController = rootNav;
     [window makeKeyAndVisible];
  
     return YES;
@@ -68,7 +61,6 @@
 
 - (void)dealloc {
 	[rootViewController release];
-    [splitViewController release];
     [window release];
     [rootPopoverButtonItem release];
 	[refreshButton release];

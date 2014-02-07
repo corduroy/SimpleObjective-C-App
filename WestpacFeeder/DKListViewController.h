@@ -7,18 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+#import "UIImageView+AFNetworking.h"
+#import "Reachability.h"
+#import "DKThumbnailDownloader.h"
 
-
-@class DKFirstViewController;
+@class DKDetailWebViewController;
 @class DKAppDelegate;   //Note normally i would use a singleton rather than link back to DKAppDelegate
 
 
-@interface DKListViewController : UITableViewController{
-    DKFirstViewController *firstDetailViewController;
+@interface DKListViewController : UITableViewController<IconDownloaderDelegate,NSURLConnectionDataDelegate>{
+    DKDetailWebViewController *firstDetailViewController;
     DKAppDelegate *appDelegate;
 }
 
 
-@property (nonatomic, retain) DKFirstViewController *firstDetailViewController;
+@property (nonatomic, strong) Reachability *hostReach;
+@property (nonatomic, strong) Reachability *internetReach;
+@property (nonatomic, strong) Reachability *wifiReach;
+@property (nonatomic, strong) MBProgressHUD *hud;
+@property (nonatomic, strong) NSMutableData *_data;
+@property (nonatomic, strong) NSMutableDictionary   *iconImageDownloadsInProgress;
+@property (nonatomic, readonly) int networkStatus;
+@property (nonatomic, retain) DKDetailWebViewController *firstDetailViewController;
 @property (nonatomic, assign) DKAppDelegate *appDelegate;
+
+- (void)appImageDidLoad:(NSIndexPath *)indexPath;
+
+- (BOOL)isParseReachable;
+
+
+
 @end
