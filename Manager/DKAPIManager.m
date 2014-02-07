@@ -42,12 +42,25 @@
 + (NSArray*)createListOfNews:(NSArray*)array{
     NSMutableArray* listOfNews = [[NSMutableArray alloc] init];
     
-    for (int i=0; i < array.count; i++){
-        News* news = [News newsWithData:[array objectAtIndex:i]];
+    
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateLine"
+                                        ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+    NSArray *sortedNewstArray = [array
+                                 sortedArrayUsingDescriptors:sortDescriptors];
+    
+    
+    
+    for (int i=0; i < sortedNewstArray.count; i++){
+        News* news = [News newsWithData:[sortedNewstArray objectAtIndex:i]];
         [listOfNews addObject:news];
         
     }
+    
+    
     return listOfNews;
+
     
 }
 
