@@ -1,5 +1,5 @@
-SimpleObjective-C-App
-=====================
+Simple Objective-C-App as part of Westpac interview
+===============================================================
 
 This is a *simple objective-c app* that demonstrates going back into the pre-arc (or archaic) days of manual memory management.
 
